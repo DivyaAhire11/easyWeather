@@ -62,9 +62,9 @@ const Home = () => {
               <div className='cloud-img'>
                   <img src ={CLOUD_IMG}/>
               </div>
-              <div>
+              <div className='city-info'>
 
-                 <p className='left-cont-temp'>{weather?.main?.temp}<i className="ri-celsius-fill"></i></p>
+                 <p className='left-cont-temp'>{weather?.temp}<i className="ri-celsius-fill"></i></p>
                  <hr />
                  <div className='city-img'>
                     <img src={CITY_IMG} />

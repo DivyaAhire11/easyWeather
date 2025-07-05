@@ -1,10 +1,10 @@
 
 .left-info-block{
-    width: 45%;
-    height: 100%;
+    width: 400px;
+    height: 280px;
     border-radius: 1rem;
     box-shadow: 2px 2px 10px gray;
-    background-color:white;
+    background-color:rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: space-evenly;

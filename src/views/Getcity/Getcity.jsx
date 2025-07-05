@@ -16,7 +16,7 @@ const Getcity = () => {
     try {
        let city= loadFromLocalStorage.getItem("city");
        if(city){
-        window.Location.href="/home"
+        window.location.href="/home"
        }
     } catch (error) {
       console.log(error);
