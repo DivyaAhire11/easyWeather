@@ -3,8 +3,8 @@
      height: 100%;
      width: 100%;
      border-radius: 1rem;
-     box-shadow: 5px 5px 10px gray;
-     background-color: white;
+     box-shadow: 5px 5px 10px rgb(104, 177, 188);
+     background-color: rgb(230, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -54,14 +54,17 @@ const Home = () => {
     <>
        <div className="main-container">
           <div className="left-container">
+            <div className="infoweather">
               <div className="search-box">
                    <i className="ri-search-line"  onClick={()=>loadweather()}></i>
                   <input placeholder='Search for places....' className='city-input' value={city} onChange={(e)=>{setcity(e.target.value)}} />           
+                 </div> 
+              <div className='cloud-img'>
+                 <img src ={CLOUD_IMG}/>
+              </div>
          
               </div>
-              <div className='cloud-img'>
-                  <img src ={CLOUD_IMG}/>
-              </div>
+           
               <div className='city-info'>
 
                  <p className='left-cont-temp'>{weather?.temp}<i className="ri-celsius-fill"></i></p>
@@ -108,6 +111,7 @@ const Home = () => {
           
           </div>
          </div> 
+      
     </div>
     </>
   )
