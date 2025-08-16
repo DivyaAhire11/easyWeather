@@ -1,65 +1,76 @@
-.main-container{
+.main-container {
     min-height: 100vh;
-   /* width: 100vw; */
-    background-color: rgba(170, 235, 255, 0.281);
+    width: 100vw;
+    /* background-color: rgba(170, 235, 255, 0.281); */
     display: flex;
-    overflow-y: scroll;
-    /* overflow: hidden; */
     position: relative;
 }
-.left-container{
-    height:100vh ;
+
+.MainImg {
+    position: absolute;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+}
+
+.left-container {
+    /* height: 100%; */
     width: 250px;
-    background-color:rgb(220, 253, 255);
-    box-shadow: 1px 1px 5px rgba(154, 154, 154, 0.958);
+    box-shadow: 5px 5px 10px rgba(154, 154, 154, 0.958);
     position: relative;
-     display: flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    z-index: 111;
 }
-.infoweather{
+
+.infoweather {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20%;
-   
+
 }
- .search-box{
+
+.search-box {
     width: 200px;
     margin: 20px;
     display: flex;
-     border:1px solid rgba(4, 18, 31, 0.346);
-  
-} 
+    border: 1px solid rgba(4, 18, 31, 0.346);
 
-.ri-search-line{
+}
+
+.ri-search-line {
     margin: auto 10px;
     font-size: 15px;
 }
-.city-input{
+
+.city-input {
     width: 90%;
     padding: 5px 0;
     border: none;
     cursor: pointer;
     outline: none;
     background-color: transparent;
-   }
-.cloud-img{
+}
+
+.cloud-img {
     height: 30%;
     width: 80%;
-    /* object-fit: cover; */
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
-.cloud-img img{
-     height: 170px;
-    width: 170px; 
+
+.cloud-img img {
+    height: 170px;
+    width: 170px;
     filter: drop-shadow(2px 2px 20px gray);
 }
-.city-info{
+
+.city-info {
     height: 250px;
     width: 230px;
     display: flex;
@@ -67,43 +78,45 @@
     justify-content: center;
     align-items: center;
 }
-.left-cont-temp{
+
+.left-cont-temp {
     font-size: 2.5rem;
     text-align: center;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* margin-top: 30px; */
 }
-.city-img{
+
+.city-img {
     height: 150px;
     width: 200px;
     margin: 30px auto;
     object-fit: cover;
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.city-img img{
-    height:100%;
+
+.city-img img {
+    height: 100%;
     width: 100%;
-   border-radius: 1rem;
-   /* opacity: 0.8; */
-   box-shadow: 2px 2px 10px gray;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 10px gray;
 }
-.left-city-name{
-    position:absolute;
+
+.left-city-name {
+    position: absolute;
     color: #fffcfc;
     font-size: 2rem;
     text-transform: uppercase;
 }
 
 
-.right-container{
+.right-container {
     height: 100%;
     width: 100%;
     background-color: rgba(243, 254, 255, 0.504);
-    /* display: flex; */
+    z-index: 111;
 }
-.head-block{
+
+.head-block {
     height: 50px;
     width: 90%;
     display: flex;
@@ -111,19 +124,20 @@
     justify-content: space-between;
     margin: auto;
 }
-.Today-info{
+
+.Today-info {
     min-height: 200px;
     width: 100%;
     display: flex;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    /* margin: 20px 0; */
     gap: 1rem;
-    
+
 }
 
-.days, .temp-icon{
+.days,
+.temp-icon {
     height: 2rem;
     width: 15%;
     display: flex;
@@ -133,64 +147,71 @@
     color: rgb(105, 104, 104);
 }
 
-.days span:hover{
+.days span:hover {
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
 
-.temp-icon span:hover{
+.temp-icon span:hover {
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
-.temp-icon img{
+
+.temp-icon img {
     height: 35px;
     width: 35px;
     border-radius: 50%;
 }
-.temp-icon img:hover{
+
+.temp-icon img:hover {
     border: 1px solid rgb(63, 63, 63);
 }
 
-.highlight-text{
+.highlight-text {
     color: rgb(78, 78, 78);
     margin: 1rem 2rem;
     font-family: "Roboto Condensed", sans-serif;
-    /* text-align: center; */
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
-.highlight-div{
+
+.highlight-div {
     height: 280px;
     width: 80%;
     margin: auto;
     display: flex;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 5%;
 }
-.right-info-block{
+
+.right-info-block {
     height: 280px;
     width: 380px;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-     flex-direction: column;
+    flex-direction: column;
     gap: 15px;
-    /* background-color: rgb(149, 0, 255); */
 
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 @media screen and (max-width : 700px) {
-    .left-container{
-         height: 30%;
-          width: 100%;
-         flex-direction:row;
-         flex-wrap: wrap;
+    .left-container {
+        height: 30%;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    .highlight-div{
+
+    .highlight-div {
         flex-direction: column;
     }
-    .main-container{
+
+    .main-container {
         flex-direction: column;
     }
-  
+
 }

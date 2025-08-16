@@ -11,9 +11,7 @@
     color: rgb(149, 148, 148);
     gap: 10px;
 }
-/* .hide{ 
-    display: none;
-}*/
+
 .Getcity-text{
      font-size: 3rem;
      text-transform: uppercase;
@@ -33,7 +31,6 @@
 .input{
     display: flex;
     margin-top: 20px;
-    /* gap: 5px; */
 }
 .GetCity button{
      padding: 10px 30px;

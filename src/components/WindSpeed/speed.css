@@ -4,7 +4,7 @@
     height: 280px;
     border-radius: 1rem;
     box-shadow: 2px 2px 10px rgb(96, 181, 184);
-   background-color: rgb(230, 255, 255);
+   background-color: rgba(230, 255, 255, 0.508);
     display: flex;
     align-items: center;
     justify-content: space-evenly;

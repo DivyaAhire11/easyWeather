@@ -1,41 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import "./getcity.css"
-import {APP_NAME,APP_DISCRIPTION } from '../../utils/data'
+// import Home from "../Home/Home.jsx"
+import { APP_NAME, APP_DISCRIPTION } from '../../utils/data'
 
 const Getcity = () => {
-        const[cityName , setCityName]=useState();
-  
-  const saveCityLocally=()=>{
-      if(!cityName){
-            return alert("Please type your City");
-      }
-      localStorage.setItem("city",cityName);
-      window.location.reload();
+  const [cityName, setCityName] = useState();
+
+  const saveCityLocally = () => {
+    if (!cityName) {
+      return alert("Please type your City");
+    }
+    localStorage.setItem("city", cityName);
+    window.location.reload();
   }
-  const loadFromLocalStorage=()=>{
+  const loadFromLocalStorage = () => {
     try {
-       let city= loadFromLocalStorage.getItem("city");
-       if(city){
-        window.location.href="/home"
-       }
+      //  let city= loadFromLocalStorage.getItem("city");
+      let city = localStorage.getItem("city");
+
+      if (city) {
+        window.location.href = "/home"
+      }
     } catch (error) {
       console.log(error);
     }
   }
-  useEffect(()=>{
-     loadFromLocalStorage();
-  },[]);
+  useEffect(() => {
+    loadFromLocalStorage();
+  }, []);
   return (
-      <div className='GetCity'>
-              <h1 className='Getcity-text'>{APP_NAME}</h1>
-              <p className='Getcity-para'>{APP_DISCRIPTION }</p>
-            
-             <div className='input'>
-                <input placeholder='type your city' className='input-city-name' value={cityName} onChange={(e)=> setCityName(e.target.value)}/>
-              <button onClick={()=>{saveCityLocally()}} >go</button>
-              
-             </div>
-        </div>
+    <div className='GetCity'>
+      <h1 className='Getcity-text'>{APP_NAME}</h1>
+      <p className='Getcity-para'>{APP_DISCRIPTION}</p>
+
+      <div className='input'>
+        <input placeholder='type your city' className='input-city-name' value={cityName} onChange={(e) => setCityName(e.target.value)} />
+        <button onClick={() => { saveCityLocally() }} ><i className="ri-arrow-right-line"></i></button>
+
+      </div>
+    </div>
   )
 };
 export default Getcity
